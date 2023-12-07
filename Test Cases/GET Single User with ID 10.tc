@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>GET Single User with ID 10</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e32f48fe-dfb0-40f9-be8c-660b3c637278</testCaseGuid>
+</TestCaseEntity>

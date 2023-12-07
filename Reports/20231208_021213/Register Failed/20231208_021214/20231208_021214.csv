@@ -1,0 +1,13 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Register Failed,,,,2023-12-08 02:12:17,2023-12-08 02:12:21,3.787s,PASSED
+,,,,,,,
+Test Cases/Register Failed,,,,2023-12-08 02:12:18,2023-12-08 02:12:21,3.394s,PASSED
+"apiPost = findTestObject(""Object Repository/Register Failed"", [""email"":email, ""password"":password])",,service api post data,,2023-12-08 02:12:18,2023-12-08 02:12:18,0.085s,PASSED
+request = apiPost.getHttpBody(),,body Request,,2023-12-08 02:12:18,2023-12-08 02:12:18,0.017s,PASSED
+"comment(""Request Body"" + request)",,,,2023-12-08 02:12:18,2023-12-08 02:12:18,0.095s,PASSED
+response = sendRequest(apiPost),,Body Response,,2023-12-08 02:12:18,2023-12-08 02:12:21,2.730s,PASSED
+"comment(""Response Body:       "" + response.getResponseText())",,,,2023-12-08 02:12:21,2023-12-08 02:12:21,0.009s,PASSED
+slurper = new groovy.json.JsonSlurper(),,variabel untuk keperluan validasi,,2023-12-08 02:12:21,2023-12-08 02:12:21,0.000s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-12-08 02:12:21,2023-12-08 02:12:21,0.023s,PASSED
+statusCode = response.getStatusCode(),,,,2023-12-08 02:12:21,2023-12-08 02:12:21,0.000s,PASSED
+assert statusCode != 200,,,,2023-12-08 02:12:21,2023-12-08 02:12:21,0.000s,PASSED
